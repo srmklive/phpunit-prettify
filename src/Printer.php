@@ -49,7 +49,7 @@ class Printer extends ResultPrinter
     /**
      * @var string
      */
-    private $configFileName = "";
+    private $configFileName = '';
 
     private $printerOptions;
 
@@ -60,25 +60,25 @@ class Printer extends ResultPrinter
     {
         parent::__construct($out, $verbose, $colors, $debug, $numberOfColumns);
 
-        $this->configFileName     = $this->getConfigurationFile("phpunit-printer.yml");
-        $this->colors             = new Colors;
-        $this->configuration      = new Config($this->configFileName);
+        $this->configFileName = $this->getConfigurationFile('phpunit-printer.yml');
+        $this->colors = new Colors();
+        $this->configuration = new Config($this->configFileName);
 
         $this->maxNumberOfColumns = $this->getWidth();
         $this->maxClassNameLength = min((int) ($this->maxNumberOfColumns / 2), $this->maxClassNameLength);
 
         // setup module options
-        $this->printerOptions     = $this->configuration->all();
-        $this->hideClassName      = $this->configuration->get('options.cd-printer-hide-class');
-        $this->simpleOutput       = $this->configuration->get('options.cd-printer-simple-output');
-        $this->showConfig         = $this->configuration->get('options.cd-printer-show-config');
+        $this->printerOptions = $this->configuration->all();
+        $this->hideClassName = $this->configuration->get('options.cd-printer-hide-class');
+        $this->simpleOutput = $this->configuration->get('options.cd-printer-simple-output');
+        $this->showConfig = $this->configuration->get('options.cd-printer-show-config');
 
         if ($this->showConfig) {
             echo PHP_EOL;
-            echo $this->colors->yellow() . "PHPUnit Printer Configuration: ". PHP_EOL;
-            echo $this->colors->cyan() .$this->configFileName;
+            echo $this->colors->yellow().'PHPUnit Printer Configuration: '.PHP_EOL;
+            echo $this->colors->cyan().$this->configFileName;
             echo $this->colors->reset();
-            echo PHP_EOL .PHP_EOL;
+            echo PHP_EOL.PHP_EOL;
         }
     }
 
@@ -87,7 +87,7 @@ class Printer extends ResultPrinter
      */
     public function packageName()
     {
-        return "PHPUnit Pretty Result Printer";
+        return 'PHPUnit Pretty Result Printer';
     }
 
     /**
@@ -95,7 +95,7 @@ class Printer extends ResultPrinter
      */
     protected function writeProgress($progress)
     {
-        if (! $this->debug) {
+        if (!$this->debug) {
             $this->printClassName();
         }
 
@@ -107,7 +107,7 @@ class Printer extends ResultPrinter
      */
     protected function writeProgressWithColor($color, $buffer)
     {
-        if (! $this->debug) {
+        if (!$this->debug) {
             $this->printClassName();
         }
 
@@ -173,7 +173,7 @@ class Printer extends ResultPrinter
     // }
 
     /**
-     * Prints the Class Name if it has changed
+     * Prints the Class Name if it has changed.
      */
     protected function printClassName()
     {
@@ -193,6 +193,7 @@ class Printer extends ResultPrinter
 
     /**
      * @param string $className
+     *
      * @return string
      */
     private function formatClassName($className)
@@ -200,22 +201,23 @@ class Printer extends ResultPrinter
         $prefix = ' ==> ';
         $ellipsis = '...';
         $suffix = ' ';
-        $formattedClassName = $prefix . $className . $suffix;
+        $formattedClassName = $prefix.$className.$suffix;
 
         if (strlen($formattedClassName) <= $this->maxClassNameLength) {
             return $this->fillWithWhitespace($formattedClassName);
         }
 
         // maxLength of class, minus leading (...) and trailing space
-        $maxLength = $this->maxClassNameLength - strlen($prefix . $ellipsis . $suffix);
+        $maxLength = $this->maxClassNameLength - strlen($prefix.$ellipsis.$suffix);
 
         // substring class name, providing space for ellipsis and one space at end
         // this result should be combined to equal $this->maxClassNameLength
-        return $prefix . $ellipsis . substr($className, (strlen($className) - $maxLength), $maxLength) . $suffix;
+        return $prefix.$ellipsis.substr($className, (strlen($className) - $maxLength), $maxLength).$suffix;
     }
 
     /**
      * @param string $className
+     *
      * @return string;
      */
     private function fillWithWhitespace($className)
@@ -225,18 +227,19 @@ class Printer extends ResultPrinter
 
     /**
      * @param string $configFileName
+     *
      * @return string
      */
-    public function getConfigurationFile($configFileName = "phpunit-printer.yml")
+    public function getConfigurationFile($configFileName = 'phpunit-printer.yml')
     {
-        $defaultConfigFilename = $this->getPackageRoot() ."/" .$configFileName;
+        $defaultConfigFilename = $this->getPackageRoot().'/'.$configFileName;
 
         $configPath = getcwd();
-        $filename   = "";
+        $filename = '';
 
-        while (! file_exists($filename)):
-            $filename = $configPath ."/" .$configFileName;
-        if ($configPath === "/") {
+        while (!file_exists($filename)):
+            $filename = $configPath.'/'.$configFileName;
+        if ($configPath === '/') {
             $filename = $defaultConfigFilename;
         }
         $configPath = dirname($configPath);
@@ -250,7 +253,7 @@ class Printer extends ResultPrinter
      */
     private function getPackageRoot()
     {
-        return (dirname(dirname(__FILE__)));
+        return dirname(dirname(__FILE__));
     }
 
     /**
