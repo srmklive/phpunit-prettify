@@ -17,14 +17,14 @@ Website: [https://github.com/mikeerickson](https://github.com/mikeerickson)
 Installation is provided via composer and can be done with the following command:
 
 ```bash
-composer require srmklive/phpunit-result-printer
+composer require srmklive/phpunit-prettify
 ```
 
 To activate the Printer for PHPUnit, just add it to your configuration XML:
 
   ```xml
   <?xml version="1.0" encoding="UTF-8"?>
-    <phpunit printerClass="Srmklive\PHPUnitPrettyResultPrinter\Printer">
+    <phpunit printerClass="Srmklive\PHPUnitPrettify\Printer">
       // ....
     </phpunit>
   ```
@@ -37,4 +37,4 @@ Or from Command-Line:
 
 ### Screenshot
 
-![Screenshot](https://github.com/mikeerickson/phpunit-pretty-result-printer/blob/master/sample.png)
+![Screenshot](https://github.com/srmklive/phpunit-prettify-result-printer/blob/master/sample.png)

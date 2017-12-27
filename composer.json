@@ -1,5 +1,5 @@
 {
-  "name": "srmklive/phpunit-result-printer",
+  "name": "srmklive/phpunit-prettify",
   "description": "PHPUnit Pretty Result Printer",
   "keywords": ["phpunit", "printer", "result-printer", "composer", "package"],
   "license": "MIT",
@@ -18,7 +18,12 @@
   },
   "autoload": {
     "psr-4": {
-      "Srmklive\\PHPUnitPrettyResultPrinter\\": "src/"
+      "Srmklive\\PHPUnitPrettify\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Srmklive\\PHPUnitPrettify\\Test\\": "tests"
     }
   },
   "scripts": {

@@ -1,15 +1,15 @@
 <?php
 
-/**
- *  Corresponding Class to test Printer class
- *
- *  @author mike erickson
- */
-class PrinterTest extends PHPUnit\Framework\TestCase
+namespace Srmklive\PHPUnitPrettify\Tests;
+
+use Srmklive\PHPUnitPrettify\Printer as PrettyPrinter;
+use PHPUnit\Framework\TestCase;
+
+class PrinterTest extends TestCase
 {
     public function testIsThereAnySyntaxError()
     {
-        $var = new Srmklive\PHPUnitPrettyResultPrinter\Printer;
+        $var = new PrettyPrinter;
         $this->assertInternalType('object', $var);
         unset($var);
     }
@@ -21,7 +21,7 @@ class PrinterTest extends PHPUnit\Framework\TestCase
      */
     public function testGetPackageName()
     {
-        $printer = new Srmklive\PHPUnitPrettyResultPrinter\Printer;
+        $printer = new PrettyPrinter;
         $this->assertSame('PHPUnit Pretty Result Printer', $printer->packageName());
         unset($var);
     }
@@ -30,7 +30,7 @@ class PrinterTest extends PHPUnit\Framework\TestCase
     public function should_return_full_pathname_to_config_file()
     {
         // create test file
-       $printer = new Srmklive\PHPUnitPrettyResultPrinter\Printer;
+       $printer = new PrettyPrinter;
        $this->assertContains('phpunit-printer.yml', $printer->getConfigurationFile());
        $this->assertFileExists($printer->getConfigurationFile());
     }
@@ -39,7 +39,7 @@ class PrinterTest extends PHPUnit\Framework\TestCase
     public function should_use_configuration_file()
     {
         // create test file
-       $printer = new Srmklive\PHPUnitPrettyResultPrinter\Printer;
+       $printer = new PrettyPrinter;
        $this->assertContains('phpunit-printer.yml', $printer->getConfigurationFile());
        $this->assertFileExists($printer->getConfigurationFile());
     }

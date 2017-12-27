@@ -1,5 +1,5 @@
 <?php
 
-namespace Srmklive\PHPUnitPrettyResultPrinter\Exception;
+namespace Srmklive\PHPUnitPrettify\Exception;
 
 class InvalidArgumentException extends \Exception {}

@@ -1,6 +1,6 @@
 <?php
 
-namespace Srmklive\PHPUnitPrettyResultPrinter;
+namespace Srmklive\PHPUnitPrettify;
 
 class Colors
 {

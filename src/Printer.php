@@ -1,30 +1,10 @@
 <?php
 
-namespace Srmklive\PHPUnitPrettyResultPrinter;
+namespace Srmklive\PHPUnitPrettify;
 
 use Noodlehaus\Config;
-use PHPUnit\Framework\Test;
-use PHPUnit\TextUI\ResultPrinter;
 
-// use this entrypoint for PHPUnit 6.x
-if (class_exists('\PHPUnit\TextUI\ResultPrinter')) {
-    class _ResultPrinter extends ResultPrinter
-    {
-        public function startTest(Test $test)
-        {
-            $this->className = get_class($test);
-            parent::startTest($test);
-        }
-    }
-}
-
-
-/**
- * Class Printer
- *
- * @license MIT
- */
-class Printer extends _ResultPrinter
+class Printer extends ResultPrinter
 {
     /**
      * @var string
