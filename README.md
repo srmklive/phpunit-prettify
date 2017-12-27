@@ -1,5 +1,5 @@
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/srmklive/phpunit-prettify.svg?style=flat-square)](https://packagist.org/packages/srmklive/paypal)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/srmklive/phpunit-prettify.svg?style=flat-square)](https://packagist.org/packages/srmklive/phpunit-prettify)
 [![StyleCI](https://styleci.io/repos/115527266/shield?branch=master)](https://styleci.io/repos/115527266)
 [![Build Status](https://travis-ci.org/srmklive/phpunit-prettify.svg?branch=master)](https://travis-ci.org/srmklive/phpunit-prettify)
 
