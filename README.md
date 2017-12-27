@@ -32,7 +32,7 @@ To activate the Printer for PHPUnit, just add it to your configuration XML:
 Or from Command-Line:
 
   ```bash
-  phpunit --printer=Srmklive\\PHPUnitPrettyResultPrinter\\Printer
+  phpunit --printer=Srmklive\\PHPUnitPrettify\\Printer
   ```
 
 ### Screenshot
