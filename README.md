@@ -37,4 +37,4 @@ Or from Command-Line:
 
 ### Screenshot
 
-![Screenshot](https://github.com/srmklive/phpunit-prettify-result-printer/blob/master/sample.png)
+![Screenshot](https://github.com/srmklive/phpunit-prettify/blob/master/sample.png)
