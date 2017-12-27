@@ -45,11 +45,12 @@ class Colors
 
     /**
      * @param int $light
+     *
      * @return string
      */
     public static function red($light = 0)
     {
-        return ($light === 1) ? self::lred() : self::RESET . self::RED;
+        return ($light === 1) ? self::lred() : self::RESET.self::RED;
     }
 
     /**
@@ -57,43 +58,47 @@ class Colors
      */
     public static function lred()
     {
-        return self::RESET . self::LRED;
+        return self::RESET.self::LRED;
     }
 
     /**
      * @param int $light
+     *
      * @return string
      */
     public static function white($light = 0)
     {
-        return ($light === 1) ? self::lwhite() : self::RESET . self::WHITE;
+        return ($light === 1) ? self::lwhite() : self::RESET.self::WHITE;
     }
 
     /**
      * @param int $light
+     *
      * @return string
      */
     public static function lwhite($light = 0)
     {
-        return self::RESET . self::LWHITE;
+        return self::RESET.self::LWHITE;
     }
 
     /**
      * @param int $light
+     *
      * @return string
      */
     public static function gray($light = 0)
     {
-        return ($light === 1) ? self::lgray() : self::RESET . self::GRAY;
+        return ($light === 1) ? self::lgray() : self::RESET.self::GRAY;
     }
 
     /**
      * @param int $light
+     *
      * @return string
      */
     public static function green($light = 0)
     {
-        return ($light === 1) ? self::lgreen() : self::RESET . self::GREEN;
+        return ($light === 1) ? self::lgreen() : self::RESET.self::GREEN;
     }
 
     /**
@@ -101,16 +106,17 @@ class Colors
      */
     public static function lgreen()
     {
-        return self::RESET . self::LGREEN;
+        return self::RESET.self::LGREEN;
     }
 
     /**
      * @param int $light
+     *
      * @return string
      */
     public static function cyan($light = 0)
     {
-        return ($light === 1) ? self::lcyan() : self::RESET . self::CYAN;
+        return ($light === 1) ? self::lcyan() : self::RESET.self::CYAN;
     }
 
     /**
@@ -118,16 +124,17 @@ class Colors
      */
     public static function lcyan()
     {
-        return self::RESET . self::LCYAN;
+        return self::RESET.self::LCYAN;
     }
 
     /**
      * @param int $light
+     *
      * @return string
      */
     public static function yellow($light = 0)
     {
-        return ($light === 1) ? self::lyellow() : self::RESET . self::YELLOW;
+        return ($light === 1) ? self::lyellow() : self::RESET.self::YELLOW;
     }
 
     /**
@@ -135,7 +142,7 @@ class Colors
      */
     public static function lyellow()
     {
-        return self::RESET . self::LYELLOW;
+        return self::RESET.self::LYELLOW;
     }
 
     /**
@@ -143,16 +150,17 @@ class Colors
      */
     public static function lgray()
     {
-        return self::RESET . self:: LGRAY;
+        return self::RESET.self:: LGRAY;
     }
 
     /**
      * @param int $light
+     *
      * @return string
      */
     public static function purple($light = 0)
     {
-        return ($light === 1) ? self::lpurple() : self::RESET . self::PURPLE;
+        return ($light === 1) ? self::lpurple() : self::RESET.self::PURPLE;
     }
 
     /**
@@ -160,16 +168,17 @@ class Colors
      */
     public static function lpurple()
     {
-        return self::RESET . self::LPURPLE;
+        return self::RESET.self::LPURPLE;
     }
 
     /**
      * @param int $light
+     *
      * @return string
      */
     public static function magenta($light = 0)
     {
-        return ($light === 1) ? self::lmagenta() : self::RESET . self::MAGENTA;
+        return ($light === 1) ? self::lmagenta() : self::RESET.self::MAGENTA;
     }
 
     /**
@@ -177,6 +186,6 @@ class Colors
      */
     public static function lmagenta()
     {
-        return self::RESET . self::LMAGENTA;
+        return self::RESET.self::LMAGENTA;
     }
 }
